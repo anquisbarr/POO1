@@ -1,0 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    int array[6];
+    float maximo=0;
+    float minimo=100;
+    float div;
+   for (int i=0;i<6;i++){
+       cin>>array[i];
+   }
+       for (int i=0;i<6;i++){
+      if (array[i]>maximo){
+          maximo=array[i];
+      }
+   }
+     for (int i=0;i<6;i++){
+       if (array[i]<minimo){
+           minimo=array[i];
+       } 
+   }
+    div= minimo/maximo;
+    cout<<fixed<<setprecision(4)<<div;
+
+    return 0;
+}
