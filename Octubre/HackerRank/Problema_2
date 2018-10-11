@@ -1,0 +1,37 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int juliana[5];
+    int javier[5];
+    int notajuliana=0;
+    int notajavier=0;
+   for (int i=0;i<5;i++){
+       cin>>juliana[i];
+   }
+   for (int i=0;i<5;i++){
+       cin>>javier[i];
+   }
+     for (int i=0;i<5;i++){
+       if (juliana[i]>javier[i]){
+           notajuliana+=1;
+       }
+        else if(javier[i]>juliana[i]){
+            notajavier+=1;
+        }
+   }
+    if (notajavier>notajuliana){
+        cout<<"Javier";
+    }
+    if (notajavier<notajuliana){
+        cout<<"Juliana";
+    }
+    if (notajavier==notajuliana){
+        cout<<"Blanco";
+    }
+}
